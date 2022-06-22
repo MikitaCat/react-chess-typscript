@@ -1,8 +1,13 @@
 import React from "react";
+import { Cell } from "../models/Cell";
 
-const CellComponent = () => {
+interface CellProps {
+  cell: Cell;
+}
+
+const CellComponent: React.FC<CellProps> = ({ cell }) => {
   return (
-    <div className="cell">
+    <div className={["cell", cell.color].join(" ")}>
       <span></span>
       <span></span>
     </div>
