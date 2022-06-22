@@ -13,7 +13,7 @@ const BoardComponent: React.FC<BoardProps> = ({ board, setBoard }) => {
         return (
           <React.Fragment key={index}>
             {row.map((cell) => {
-              return <CellComponent cell={cell} />;
+              return <CellComponent cell={cell} key={cell.id} />;
             })}
           </React.Fragment>
         );
