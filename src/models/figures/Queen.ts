@@ -8,6 +8,6 @@ export class Queen extends Figure {
   constructor(color: Colors, cell: Cell) {
     super(color, cell);
     this.logo = color === Colors.BLACK ? blackLogo : whiteLogo;
-    this.name = FiguresNames.ROOK;
+    this.name = FiguresNames.QUEEN;
   }
 }
