@@ -26,7 +26,5 @@ export class Board {
 
   public addFigures() {
     new Queen(Colors.BLACK, this.getCell(3, 3));
-    console.log("HERE!");
-    console.log(new Queen(Colors.BLACK, this.getCell(3, 3)));
   }
 }

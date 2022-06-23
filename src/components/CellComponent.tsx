@@ -6,8 +6,6 @@ interface CellProps {
 }
 
 const CellComponent: React.FC<CellProps> = ({ cell }) => {
-  console.log(cell.figure?.logo);
-
   return (
     <div className={["cell", cell.color].join(" ")}>
       {cell.figure?.logo && (
