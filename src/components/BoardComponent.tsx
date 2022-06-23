@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Board } from "../models/Board";
 import CellComponent from "./CellComponent";
 import { useState } from "react";
@@ -15,6 +15,21 @@ const BoardComponent: React.FC<BoardProps> = ({ board, setBoard }) => {
     if (cell.figure) {
       setSelectedCell(cell);
     }
+  }
+
+  useEffect(() => {
+    hilightCells();
+  }, [selectedCell]);
+
+  function hilightCells() {
+    board.hilightCell(selectedCell);
+    updateBoard();
+  }
+
+  //Board rerendering
+  function updateBoard() {
+    const newBoard = board.getCopyBoard();
+    setBoard(newBoard);
   }
 
   return (
